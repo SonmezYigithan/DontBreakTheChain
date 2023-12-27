@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HabitPreviewViewController.swift
 //  DontBreakTheChain
 //
 //  Created by Yiğithan Sönmez on 19.12.2023.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HabitPreviewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "Habit Name"
     }
 
-
 }
-
