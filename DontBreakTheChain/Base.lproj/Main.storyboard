@@ -30,7 +30,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dsj-MK-f4k"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="76e-FD-fyu" firstAttribute="centerX" secondItem="UdB-YK-F1m" secondAttribute="centerX" id="JpL-Iw-Sdg"/>
                             <constraint firstItem="V4u-fP-YwP" firstAttribute="leading" secondItem="UdB-YK-F1m" secondAttribute="leading" id="WDV-yw-zVW"/>
@@ -108,20 +108,8 @@
                     <view key="view" contentMode="scaleToFill" id="N85-FB-Mfw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7q-WP-X3G">
-                                <rect key="frame" x="152.66666666666666" y="415.66666666666669" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7Op-Xy-m76"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="i7q-WP-X3G" firstAttribute="centerY" secondItem="N85-FB-Mfw" secondAttribute="centerY" id="Oyf-8c-rbb"/>
-                            <constraint firstItem="i7q-WP-X3G" firstAttribute="centerX" secondItem="N85-FB-Mfw" secondAttribute="centerX" id="lA0-fn-W6J"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fnh-FP-rCP"/>
                 </viewController>
@@ -158,9 +146,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

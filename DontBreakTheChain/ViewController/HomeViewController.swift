@@ -59,6 +59,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         let habitPreviewVC = storyboard?.instantiateViewController(withIdentifier: "HabitPreviewViewController") as! HabitPreviewViewController
         
+        habitPreviewVC.configure(with: habits[indexPath.row])
         navigationController?.pushViewController(habitPreviewVC, animated: true)
     }
 }

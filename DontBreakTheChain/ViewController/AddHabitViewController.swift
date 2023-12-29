@@ -17,7 +17,7 @@ class AddHabitViewController: UIViewController {
     
     var selectedColor: UIColor?
     var habitNameField: UITextField?
-    var habitDescription: String?
+    var habitDescriptionField: UITextField?
     
     let totalNumberOfElements = 4
     
@@ -45,11 +45,12 @@ class AddHabitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add Habit"
-        view.backgroundColor = .gray
     }
     
     func createHabbit() {
         guard let habitName = habitNameField?.text else {return}
+        
+        guard let habitDescription = habitDescriptionField?.text else {return}
         
         if habitName.isEmpty {
             let alertController = UIAlertController(title: "Hey You", message: "Please Fill the Habit Name Field", preferredStyle: UIAlertController.Style.alert)
@@ -62,7 +63,7 @@ class AddHabitViewController: UIViewController {
         
         let habit = Habit(
             habitName: habitName,
-            habitDescription: "Test",
+            habitDescription: habitDescription,
             habitColor: color
         )
         
@@ -79,7 +80,7 @@ extension AddHabitViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if(section == 0){
-            return " "
+            return "Habit Details"
         }
         else if(section == 1){
             return "Color Picker"
@@ -119,10 +120,10 @@ extension AddHabitViewController: UITableViewDelegate, UITableViewDataSource {
         else if(absoluteIndex == 1){
             let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identifier, for: indexPath) as! TextFieldTableViewCell
             cell.textField.placeholder = "Description"
+            habitDescriptionField = cell.textField
             return cell
         }
         else if(absoluteIndex == 2){
-            // Color Picker
             let cell = tableView.dequeueReusableCell(withIdentifier: ColorTableViewCell.identifier, for: indexPath) as! ColorTableViewCell
             cell.onColorSelected = { [weak self] color in
                 self?.selectedColor = color
@@ -130,7 +131,6 @@ extension AddHabitViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         else{
-            // Reminder
             let cell = tableView.dequeueReusableCell(withIdentifier: ReminderTableViewCell.identifier, for: indexPath) as! ReminderTableViewCell
             return cell
         }
