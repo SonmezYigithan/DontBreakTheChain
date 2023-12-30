@@ -21,15 +21,18 @@ enum Day {
 struct Habit {
     var habitName: String
     var habitDescription: String
-    var habitColor: UIColor? // change type to Color later
+    var habitColor: UIColor?
+    var totalProgress: Int
+    var streakDays: [StreakDay]
+    
 //    var reminderActive: Bool
 //    var remindTime: String // change type to time 21:30
 //    var remindDays: [Day]
-//    var streakDays: [StreakDay]
     
 }
 
 struct StreakDay {
-    let habitDate: Date
+    var progress: Int
+    let habitDate: DateComponents
     
 }

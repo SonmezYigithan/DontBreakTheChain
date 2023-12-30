@@ -32,9 +32,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         title = "My Habits"
 
-        let habit1 = Habit(habitName: "Play Guitar", habitDescription: "Play guitar 30 min every day", habitColor: .blue)
+        let habit1 = Habit(habitName: "Play Guitar", habitDescription: "Play guitar 30 min every day", habitColor: .blue, totalProgress: 30, streakDays: [])
         
-        let habit2 = Habit(habitName: "Drink Water", habitDescription: "Drink 2 liters of water every day", habitColor: .red)
+        let habit2 = Habit(habitName: "Drink Water", habitDescription: "Drink 2 liters of water every day", habitColor: .red, totalProgress: 10, streakDays: [])
         
         habits.append(habit1)
         habits.append(habit2)

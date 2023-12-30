@@ -61,10 +61,14 @@ class AddHabitViewController: UIViewController {
         
         let color = selectedColor ?? .lightGray
         
+        let streakDays:[StreakDay] = []
+        
         let habit = Habit(
             habitName: habitName,
             habitDescription: habitDescription,
-            habitColor: color
+            habitColor: color,
+            totalProgress: 30,
+            streakDays: streakDays
         )
         
         addHabitDelegate?.didCreateNewHabit(newHabit: habit)
